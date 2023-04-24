@@ -1,29 +1,52 @@
 package com.morvencat.ui;
 
 import javax.swing.*;
+import java.util.Random;
 
 public class GameJFrame extends JFrame {
+
+    //生成存储图片位置数据的二维数组
+    //管理数据，加载图片用
+    int[][] data = new int[4][4];
+
+
     public GameJFrame(){
         //菜單初始化
         initJFrame();
         //功能欄初始化
         initJMenuBar();
+        //数据初始化
+        initData();
         //圖片初始化
         initImage();
         //显示窗口
         this.setVisible(true);
     }
 
+    private void initData() {
+        Random r = new Random();
+        int[] tempArr = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+        for (int i = 0; i < tempArr.length; i++) {
+            int index = r.nextInt(tempArr.length);
+            int temp = tempArr[i];
+            tempArr[i] = tempArr[index];
+            tempArr[index] = temp;
+        }
+        for (int i = 0; i < tempArr.length; i++) {
+            data[i/4][i%4] = tempArr[i];
+        }
+    }
+
+
     private void initImage() {
-        int number = 1;
         for (int i = 0 ; i < 4 ; i ++) {
             for (int j =0 ; j < 4; j++) {
-                JLabel jLabel = new JLabel(new ImageIcon("image/animal/animal3/"+number+".jpg"));
+                JLabel jLabel = new JLabel(new ImageIcon("image/animal/animal3/"+data[i][j]+".jpg"));
                 //指定圖片位置
                 jLabel.setBounds(105*j,105*i,105,105);
                 //把管理容器添加到主界面
                 this.getContentPane().add(jLabel);
-                number++;
+
             }
         }
     }

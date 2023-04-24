@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb00e066-2fee-4962-9889-3cccc230342b" name="变更" comment="1">
+    <list default="true" id="cb00e066-2fee-4962-9889-3cccc230342b" name="变更" comment="初始化">
+      <change afterPath="$PROJECT_DIR$/src/com/morvencat/test/TestJFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/morvencat/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/morvencat/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/morvencat/ui/GameJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/morvencat/ui/GameJFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +67,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\43579\IdeaProjects\puzzlegame" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.morvencat.test" />
+    </key>
   </component>
   <component name="RunManager" selected="应用程序.Test">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -103,6 +109,7 @@
       <updated>1682063986711</updated>
       <workItem from="1682063988193" duration="3615000" />
       <workItem from="1682250931988" duration="6492000" />
+      <workItem from="1682332640175" duration="6268000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1682266273899</created>
@@ -132,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682329797105</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="初始化">
+      <created>1682332723241</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682332723241</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +167,7 @@
     <MESSAGE value="1" />
     <MESSAGE value="拼图游戏" />
     <MESSAGE value="拼图小游戏" />
-    <option name="LAST_COMMIT_MESSAGE" value="拼图小游戏" />
+    <MESSAGE value="初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
   </component>
 </project>

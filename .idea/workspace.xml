@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb00e066-2fee-4962-9889-3cccc230342b" name="变更" comment="1" />
+    <list default="true" id="cb00e066-2fee-4962-9889-3cccc230342b" name="变更" comment="拼图小游戏" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +53,7 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "http.proxy",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -99,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682063986711</updated>
       <workItem from="1682063988193" duration="3615000" />
-      <workItem from="1682250931988" duration="6365000" />
+      <workItem from="1682250931988" duration="6492000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1682266273899</created>
@@ -115,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682329750903</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1">
+      <created>1682329783597</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682329783597</updated>
+    </task>
+    <task id="LOCAL-00004" summary="拼图小游戏">
+      <created>1682329797105</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682329797105</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="拼图游戏" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="拼图小游戏" />
+    <option name="LAST_COMMIT_MESSAGE" value="拼图小游戏" />
   </component>
 </project>

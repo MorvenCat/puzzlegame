@@ -43,12 +43,15 @@ public class GameJFrame extends JFrame {
             for (int j =0 ; j < 4; j++) {
                 JLabel jLabel = new JLabel(new ImageIcon("image/animal/animal3/"+data[i][j]+".jpg"));
                 //指定圖片位置
-                jLabel.setBounds(105*j,105*i,105,105);
+                jLabel.setBounds(105*j + 83,105*i + 134,105,105);
                 //把管理容器添加到主界面
                 this.getContentPane().add(jLabel);
 
             }
         }
+        JLabel jLabel = new JLabel(new ImageIcon("image/background.png"));
+        jLabel.setBounds(40,40,508,560);
+        this.getContentPane().add(jLabel);
     }
 
     private void initJMenuBar() {

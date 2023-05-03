@@ -1,7 +1,5 @@
 package com.morvencat.ui;
 
-import org.w3c.dom.events.Event;
-
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import java.awt.event.ActionEvent;
@@ -29,17 +27,22 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     int y = 0;
 
     //定义图片路径变量
-    String path = "image/girl/girl2/";
+    String path = "image/animal/animal3/";
+
 
     //计步器
     int step = 0;
 
     //创建条目对象
-    JMenuItem replayItem = new JMenuItem("重开");
-    JMenuItem reLoginItem = new JMenuItem("重进");
-    JMenuItem closeItem = new JMenuItem("退出");
+    JMenuItem replayItem = new JMenuItem("重新开始");
+    JMenuItem girl = new JMenuItem("美女");
+    JMenuItem animal = new JMenuItem("动物");
+    JMenuItem sport = new JMenuItem("运动");
+    JMenuItem reLoginItem = new JMenuItem("重新登录");
+    JMenuItem closeItem = new JMenuItem("关闭游戏");
+    JMenuItem accountItem = new JMenuItem("关于");
+    JMenuItem help = new JMenuItem("帮助");
 
-    JMenuItem accountItem = new JMenuItem("关于我们");
 
     public GameJFrame() {
         //菜單初始化
@@ -91,7 +94,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                JLabel jLabel = new JLabel(new ImageIcon(path + data[i][j] + ".jpg"));
+                JLabel jLabel = new JLabel(new ImageIcon(this.path + data[i][j] + ".jpg"));
                 //指定圖片位置
                 jLabel.setBounds(105 * j + 84, 105 * i + 135, 105, 105);
                 //给图片加个边框对象
@@ -115,16 +118,27 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         //创建菜单对象
         JMenuBar jmenubar = new JMenuBar();
 
+        //创建更换图片栏目
         //创建菜单栏目对象
         JMenu functionMenu = new JMenu("功能");
         JMenu aboutMenu = new JMenu("关于");
+        JMenu changeImage = new JMenu("更换图片");
+
+
 
         //把条目选项装到栏目里面
+        functionMenu.add(changeImage);
+        aboutMenu.add(accountItem);
+        aboutMenu.add(help);
         functionMenu.add(replayItem);
         functionMenu.add(reLoginItem);
         functionMenu.add(closeItem);
 
-        aboutMenu.add(accountItem);
+
+
+        changeImage.add(girl);
+        changeImage.add(sport);
+        changeImage.add(animal);
 
 
         //绑定事件
@@ -132,6 +146,11 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         reLoginItem.addActionListener(this);
         closeItem.addActionListener(this);
         accountItem.addActionListener(this);
+        girl.addActionListener(this);
+        animal.addActionListener(this);
+        sport.addActionListener(this);
+        help.addActionListener(this);
+
 
         //把菜单栏目装到菜单里
         jmenubar.add(functionMenu);
@@ -264,6 +283,8 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
+        Random r = new Random();
+        int i = r.nextInt(1,10);
         if(obj == replayItem){
             System.out.println("重开");
             step = 0;
@@ -280,7 +301,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             System.out.println("关于");
             JDialog jDialog =new JDialog();
             JLabel jLabel = new JLabel(new ImageIcon("image/about.png"));
-            jLabel.setBounds(0,0,258,258);
+            jLabel.setBounds(0,0,344,344);
             jDialog.getContentPane().add(jLabel);
             jDialog.setSize(344,344);
             jDialog.setAlwaysOnTop(true);
@@ -288,6 +309,48 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             jDialog.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
             jDialog.setModal(true);
             jDialog.setVisible(true);
+        } else if (obj == help) {
+            System.out.println("帮助");
+            JDialog jDialog =new JDialog();
+
+            JLabel helpJB = new JLabel("玩   法");
+            helpJB.setBounds(15,20,300,20);
+            JLabel fangxiangJB = new JLabel("方向键：控制空白方块移动");
+            fangxiangJB.setBounds(15,50,300,20);
+            JLabel aJB = new JLabel("A: 查看完整图片");
+            aJB.setBounds(15,80,300,20);
+            JLabel wJB = new JLabel("W: 作弊");
+            wJB.setBounds(15,110,300,20);
+            JLabel emp = new JLabel(" ");
+
+            jDialog.getContentPane().add(helpJB);
+            jDialog.getContentPane().add(fangxiangJB);
+            jDialog.getContentPane().add(aJB);
+            jDialog.getContentPane().add(wJB);
+            jDialog.getContentPane().add(emp);
+
+
+            jDialog.setSize(344,344);
+            jDialog.setAlwaysOnTop(true);
+            jDialog.setLocationRelativeTo(null);
+            jDialog.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+            jDialog.setModal(true);
+            jDialog.setVisible(true);
+        } else if(obj == girl){
+            this.path = "image/girl/girl"+i+"/";
+            step = 0;
+            initData();
+            initImage();
+        }else if(obj == animal){
+            this.path = "image/animal/animal"+i+"/";
+            step = 0;
+            initData();
+            initImage();
+        }else if(obj == sport){
+            this.path = "image/sport/sport"+i+"/";
+            step = 0;
+            initData();
+            initImage();
         }
     }
 }
